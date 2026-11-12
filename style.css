@@ -1,0 +1,388 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --azul: #101c30;
+    --azul-claro: #1d3557;
+    --laranja: #ff8c32;
+    --cinza: #aeb8c4;
+    --fundo: #f3f5f8;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: #252d38;
+    line-height: 1.7;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--azul);
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--laranja);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--laranja);
+}
+
+/* CAPA PRINCIPAL */
+
+.hero {
+    min-height: 550px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 22, 40, 0.95),
+            rgba(10, 22, 40, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--laranja);
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    color: #e2e7ed;
+}
+
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+    background: var(--laranja);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: #e56f15;
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 75px 10%;
+    scroll-margin-top: 20px;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo h2 {
+    font-size: 32px;
+    color: var(--azul);
+}
+
+.titulo span {
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: var(--laranja);
+    margin: 12px auto;
+}
+
+.texto {
+    max-width: 950px;
+    margin: auto;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.texto p {
+    margin-bottom: 18px;
+}
+
+.fundo-claro {
+    background: white;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    border-bottom: 4px solid var(--laranja);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: var(--azul-claro);
+    margin-bottom: 10px;
+}
+
+/* LINHA DO TEMPO */
+
+.linha-tempo {
+    max-width: 850px;
+    margin: 35px auto;
+    border-left: 3px solid var(--laranja);
+    padding-left: 28px;
+}
+
+.evento {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.evento::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--laranja);
+    border-radius: 50%;
+    left: -37px;
+    top: 8px;
+}
+
+.evento h3 {
+    color: var(--azul-claro);
+}
+
+.data {
+    color: #e56f15;
+    font-weight: bold;
+}
+
+/* MERCADO DE TRABALHO */
+
+.mercado {
+    background: var(--azul);
+    color: white;
+}
+
+.mercado .titulo h2 {
+    color: white;
+}
+
+.mercado .card {
+    color: #252d38;
+}
+
+.mercado .card h3 {
+    color: var(--azul-claro);
+}
+
+/* GRÁFICO SALARIAL */
+
+.salario-container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    color: #252d38;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.salario-container h3 {
+    margin-bottom: 25px;
+    color: var(--azul);
+}
+
+.barra-item {
+    margin-bottom: 22px;
+}
+
+.barra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.barra-fundo {
+    height: 17px;
+    background: #e3e7ed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.barra {
+    height: 100%;
+    background: var(--laranja);
+    border-radius: 20px;
+}
+
+.observacao {
+    font-size: 13px;
+    color: #606975;
+    margin-top: 20px;
+}
+
+.salario-container a {
+    color: #d96b16;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #091322;
+    color: white;
+    padding: 45px 10%;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--laranja);
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 7px 0;
+    color: #cbd3dd;
+}
+
+.creditos {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #354153;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 7%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+
+    .titulo h2 {
+        font-size: 26px;
+    }
+
+    .texto {
+        text-align: left;
+    }
+
+    .salario-container {
+        padding: 20px;
+    }
+
+    .barra-info {
+        font-size: 13px;
+    }
+}
+
+/* ANIMAÇÃO DAS SEÇÕES */
+
+.animar {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animar.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
